@@ -1,0 +1,19 @@
+test_file =open("tekst","r")
+str = test_file.read()
+test_file.close()
+print(str)
+
+str = str.split(' ')
+wordNum = int(input("введите номер\n"))-1
+print(str[wordNum])
+word = input("слово\n")
+
+str[wordNum] = word
+new_str =''
+for el in str:
+    new_str += el + ' '
+print(new_str)
+new_str = new_str[0:len(new_str)-1]
+test_file = open("tekst","w")
+test_file.write(new_str)
+test_file.close()
